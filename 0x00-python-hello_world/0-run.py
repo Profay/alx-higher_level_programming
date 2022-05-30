@@ -1,2 +1,2 @@
-#!/usr/bin/python3
-python3 SCRIPTNAME.py
+#!/bin/bash
+python $PYFILE
