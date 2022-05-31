@@ -4,7 +4,5 @@ def remove_char_at(str, n):
         part = str[:n]
         parts = str[n+1:]
         return part + parts
-    else:
-        return str
 
 print(remove_char_at("Chicago", -3))
