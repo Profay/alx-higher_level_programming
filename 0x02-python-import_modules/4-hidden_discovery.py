@@ -1,7 +1,6 @@
 import hidden_4
 
-
-def main():
+if __name__ == "__main__":
     file = dir(hidden_4)
     a = len(file)
     for i in range(0, a):
@@ -9,7 +8,3 @@ def main():
             continue
         else:
             print(file[i])
-
-
-if __name__ == "__main__":
-    main()
