@@ -1,7 +1,6 @@
 #!/usr/bin/python3
-def add(a, b):
-    a = 1
-    b = 2
-    result = a + b
-    print("{} + {} = {}".format(a, b, result))
-add ()
+
+list = [1, 2, 3, 4, 5]
+list.reverse()
+for i in range(0, 5):
+    print(list[i])
