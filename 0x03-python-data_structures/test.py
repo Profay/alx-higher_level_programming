@@ -1,11 +1,9 @@
 #!/usr/bin/python3
 
-def no_c_print(s):
-    new_string = ''
-    for character in s:
-        if character not in 'Cceat':
-            new_string += character
-    print(new_string)
-
-
-no_c_print("Characters")
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+for row in matrix:
+    retu
