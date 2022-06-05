@@ -6,4 +6,5 @@ matrix = [
     [7, 8, 9]
 ]
 for row in matrix:
-    retu
+    row = " ".join
+row))
