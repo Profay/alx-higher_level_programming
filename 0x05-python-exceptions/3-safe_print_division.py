@@ -2,7 +2,7 @@
 
 
 def safe_print_division(a, b):
-    def div (num1, num2):
+    def div(num1, num2):
         return (num1 / num2)
     try:
         a = div(a, b)
