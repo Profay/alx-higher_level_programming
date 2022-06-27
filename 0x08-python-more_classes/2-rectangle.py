@@ -17,7 +17,7 @@ class Rectangle:
     def width(self):
         """
         Returns the width of the rectangle
-        """"
+        """
         return self.__width
 
     @width.setter
@@ -50,3 +50,18 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         else:
             self.__height = value
+
+    def area(self):
+        """
+        return the product of the width and height of the rectangle
+        """
+        return self.__width * self.__height
+
+    def perimeter(self):
+        """
+        Return the addition of all sides of the rectangle
+        """
+        if self.__width == 0 or self.__height == 0:
+            return 0
+        else:
+            return ((self.__width + self.__height) * 2 )
