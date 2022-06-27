@@ -10,13 +10,13 @@ class Rectangle:
         """
         Declaring the init method for rectangle of width and height
         """
-        self.__width = width
         self.__height = height
-        
+        self.__width = width
+
     @property
     def width(self):
         return self.__width
-        
+
     @width.setter
     def width(self, value):
         if type(value) is not int:
@@ -25,11 +25,11 @@ class Rectangle:
             raise ValueError("width must be >= 0")
         else:
             self.__width = value
-    
+
     @property
     def height(self):
         return self.__height
-        
+
     @height.setter
     def height(self, value):
         if type(value) is not int:
