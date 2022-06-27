@@ -81,11 +81,13 @@ class Rectangle:
                 if i < self.__height - 1:
                     print_string += "\n"
             return print_string
+
     def __repr__(self):
         """
         Instance Method : repr
         """
         return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
+
     def __del__(self):
         """
         Instance Method : delete & message
