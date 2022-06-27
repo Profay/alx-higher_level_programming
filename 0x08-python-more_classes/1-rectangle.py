@@ -10,6 +10,7 @@ class Rectangle:
     Rectangle will have its width and height
     Cases of Area might be included later on.
     """
+
     def __init__(self, width=0, height=0):
         """
         Declaring the init method for rectangle of width and height
@@ -21,7 +22,7 @@ class Rectangle:
     def width(self):
         """
         Returns the width of the rectangle
-        """"
+        """
         return self.__width
 
     @width.setter
