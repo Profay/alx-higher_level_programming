@@ -86,3 +86,8 @@ class Rectangle:
         Instance Method : repr
         """
         return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
+    def __del__(self):
+        """
+        Instance Method : delete & message
+        """
+        print("Bye rectangle...")
