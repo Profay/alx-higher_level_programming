@@ -10,14 +10,14 @@ class Rectangle:
     Rectangle will have its width and height
     Cases of Area might be included later on.
     """
-    number = 0
+    number_of_instances = 0
     def __init__(self, width=0, height=0):
         """
         Declaring the init method for rectangle of width and height
         """
         self.__height = height
         self.__width = width
-        Rectangle.number += 1
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -94,5 +94,5 @@ class Rectangle:
         """
         Instance Method : delete & message
         """
-        Rectangle.number -= 1
+        Rectangele.number_of_instances -= 1
         print("Bye rectangle...")
