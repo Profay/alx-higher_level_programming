@@ -1,7 +1,10 @@
 def increment(n):
+    a = []
     for i in range(len(n)):
-    return n
+        a += [n[i] + 1]
+    return a
 
-a = (1, 2)
-print(increment(a))
+a = [1, 2]
+b = increment(a)
 print(a)
+print(b)
