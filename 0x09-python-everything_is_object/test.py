@@ -1,9 +1,6 @@
-def assign_value(n, v):
-    n = v
-    return n
+a = (1, 2)
+b = (1, 2)
 
-l1 = 2
-l2 = 3assign_value(l1, l2)
-print(l1)
-l1 = l2
-print(l1)
+
+print(a == b)
+print( a is b)
