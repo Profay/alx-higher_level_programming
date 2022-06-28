@@ -1,10 +1,9 @@
-def increment(n):
-    a = []
-    for i in range(len(n)):
-        a += [n[i] + 1]
-    return a
+def assign_value(n, v):
+    n = v
+    return n
 
-a = [1, 2]
-b = increment(a)
-print(a)
-print(b)
+l1 = 2
+l2 = 3assign_value(l1, l2)
+print(l1)
+l1 = l2
+print(l1)
