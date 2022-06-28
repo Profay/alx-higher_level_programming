@@ -1,6 +1,7 @@
-l1 = [1, 2, 3]
-l2 = l1
-li= l1 + [4]
+def increment(n):
+    for i in range(len(n)):
+    return n
 
-print(l1)
-print(l2)
+a = (1, 2)
+print(increment(a))
+print(a)
