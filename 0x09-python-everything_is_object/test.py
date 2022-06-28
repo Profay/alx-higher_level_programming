@@ -1,6 +1,6 @@
-a = [1, 2,]
-b = "Hello"
-c = a
+l1 = [1, 2, 3]
+l2 = l1
+li= l1 + [4]
 
-print(a is c)
-print(a is b)
+print(l1)
+print(l2)
