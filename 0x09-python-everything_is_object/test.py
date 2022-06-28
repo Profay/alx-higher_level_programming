@@ -1,4 +1,4 @@
-a = "Hello"
+a = [1, 2,]
 b = "Hello"
 c = a
 
