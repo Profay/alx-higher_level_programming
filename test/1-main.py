@@ -1,17 +1,17 @@
-#!/usr/bin/python3
-Square = __import__('1-square').Square
+class Base():
+    """ My base class """
 
-my_square = Square(3)
-print(type(my_square))
-print(my_square.__dict__)
+    __nb_instances = 0
 
-try:
-    print(my_square.size)
-except Exception as e:
-    print(e)
+    def __init__(self):
+        Base.__nb_instances += 1
+        self.id = Base.__nb_instances
 
-try:
-    print(my_square.__size)
-except Exception as e:
-    print(e)
-    
+class User(Base):
+    """ My User class """
+    pass
+
+b = Base()
+b = Base()
+u = User()
+print(dir(Base))
