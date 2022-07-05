@@ -4,7 +4,7 @@ Modules for reading file [with]
 """
 
 
-def read_file(filename="", letters=""):
+def write_file(filename="", text=""):
     """
     Function for writing new contents to a file
     Returning the lenght of the text
