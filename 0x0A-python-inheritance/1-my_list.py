@@ -1,11 +1,13 @@
 #!/usr/bin/python3
-"""
-Define the Mylist class
+""" class inheritance
 """
 
 
 class MyList(list):
-    """ Subclass of list """
+    """ a subclass of integer lists
+    """
+
     def print_sorted(self):
-        """ prints list sorted """
+        """ function that prints a sorted list of integers
+        """
         print(sorted(self))
