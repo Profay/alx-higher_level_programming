@@ -20,9 +20,9 @@ try:
                 file_size += int(tokens[-1])
                 if a == i:
                     i += 1
-            except:
+            except (TypeError):
                 if a == i:
-                    continue
+                    pass
         if i % 10 == 0:
             print("File size: {:d}".format(file_size))
             for key, value in sorted(status_tally.items()):
