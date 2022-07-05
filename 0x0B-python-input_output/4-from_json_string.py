@@ -5,7 +5,7 @@ Modules for json string representation
 import json
 
 
-def to_json_string(my_obj):
+def from_json_string(my_str):
     """
     This function return the python data structure json
     string representation of the argument recieved
