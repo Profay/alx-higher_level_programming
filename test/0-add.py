@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 
-list = [1, 2, 3, 4, 5]
-list.reverse()
-for i in range(0, 5):
-    print(list[i])
+def writing(text=""):
+    with open("txt.txt", mode='w', encoding='utf-8') as file:
+        return file.write(text)
+
+
+print(writing("I am going to school"))
