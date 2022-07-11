@@ -23,6 +23,7 @@ class Rectangle(Base):
         """ Function for getting the width of the rectangle
         """
         return self.__width
+
     @width.setter
     def width(self, value):
         """ Function setting the width
@@ -33,12 +34,13 @@ class Rectangle(Base):
             raise ValueError("width must be > 0")
         else:
             self.__width = value
-    
+
     @property
     def height(self):
         """ Function for getting height of the rectangle
         """
         return self.__height
+
     @height.setter
     def height(self, value):
         """ Function setting the height
@@ -49,12 +51,13 @@ class Rectangle(Base):
             raise ValueError("height must be > 0")
         else:
             self.__height = value
-    
+
     @property
     def x(self):
         """ Function for getting x of the rectangle
         """
         return self.__x
+
     @x.setter
     def x(self, value):
         """ Function setting the x
@@ -65,11 +68,13 @@ class Rectangle(Base):
             raise ValueError("x must be >= 0")
         else:
             self.__x = value
+
     @property
     def y(self):
         """ Function for getting y of the rectangle
         """
         return self.__y
+
     @y.setter
     def y(self, value):
         """ Function setting the y
@@ -80,4 +85,16 @@ class Rectangle(Base):
             raise ValueError("y must be >= 0")
         else:
             self.__y = value
-    
+
+    def area(self):
+        """ Function returning the area of the rectangle
+        """
+        return self.__height * self.__width
+
+    def display(self):
+        """ This method prints the rectangle instance
+        with character '#'
+        """
+        rectangle = '\n' * self.y + \
+            (' ' * self.x + '#' * self.width + '\n') * self.height
+        print(rectangle, end='')
