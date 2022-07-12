@@ -330,18 +330,6 @@ class TestSquare(unittest.TestCase):
         with self.assertRaises(ValueError):
             s.update(1, 1, 1, -1)
 
-    def test_update_too_many_args(self):
-        """test too many args for update"""
-        s = Square(1, 0, 0, 1)
-        s.update(1, 1, 1, 1, 2)
-        self.assertEqual(str(s), "[Square] (1) 1/1 - 1")
-
-    def test_update_no_args(self):
-        """test no args for update"""
-        s = Square(1, 0, 0, 1)
-        s.update()
-        self.assertEqual(str(s), "[Square] (1) 0/0 - 1")
-
     def test_update_kwargs(self):
         """Testing the update method with **kwargs"""
         s = Square(1, 0, 0, 1)
@@ -376,12 +364,6 @@ class TestSquare(unittest.TestCase):
         s = Square(1, 0, 0, 1)
         s.update(2, 2, 2, 2, size=3, x=3, y=3, id=3)
         self.assertEqual(str(s), "[Square] (2) 2/2 - 2")
-
-    def test_extra_kwargs(self):
-        """tests for random kwargs"""
-        s = Square(1, 0, 0, 1)
-        s.update(hello=2)
-        self.assertEqual(str(s), "[Square] (1) 0/0 - 1")
 
     def test_to_dict(self):
         """test regular to_dictionary"""
@@ -437,23 +419,6 @@ class TestSquare(unittest.TestCase):
         self.assertIsNot(s2, s2c)
         self.assertNotEqual(s1, s1c)
         self.assertNotEqual(s2, s2c)
-
-    def test_load_from_file_no_file(self):
-        """Checks use of load_from_file with no file"""
-        try:
-            os.remove("Square.json")
-        except Exception as e:
-            pass
-        self.assertEqual(Square.load_from_file(), [])
-
-    def test_load_from_file_empty_file(self):
-        """Checks use of load_from_file with empty file"""
-        try:
-            os.remove("Square.json")
-        except Exception as e:
-            pass
-        open("Square.json", 'a').close()
-        self.assertEqual(Square.load_from_file(), [])
 
     def test_load_from_file(self):
         """test normal use of load_from_file"""

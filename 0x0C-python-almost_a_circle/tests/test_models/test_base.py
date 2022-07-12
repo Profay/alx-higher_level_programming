@@ -252,20 +252,6 @@ Unit test for the load_from_file method of the Base class
 class TestBaseSize(unittest.TestCase):
     """ tests for load_from_file of base.py """
 
-    def test_load_empty_file(self):
-        """Tests for non existant and empty file"""
-        if (os.path.exists("Rectangle.json") is True):
-            os.remove("Rectangle.json")
-        if (os.path.exists("Square.json") is True):
-            os.remove("Square.json")
-        if (os.path.exists("Base.json") is True):
-            os.remove("Base.json")
-        lst = Rectangle.load_from_file()
-        self.assertEqual(lst, [])
-        os.mknod("Rectangle.json")
-        lst = Rectangle.load_from_file()
-        self.assertEqual(lst, [])
-
     def test_load_rectangle(self):
         """Test for loading a list of rectangles"""
         rect_a = Rectangle(2, 4)
