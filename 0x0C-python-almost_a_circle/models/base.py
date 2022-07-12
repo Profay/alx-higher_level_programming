@@ -3,6 +3,7 @@
 It takes a private instance object
 """
 import json
+import csv
 
 
 class Base:
