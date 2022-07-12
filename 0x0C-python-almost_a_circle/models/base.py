@@ -2,6 +2,7 @@
 """Modules for class base
 It takes a private instance object
 """
+import json
 
 
 class Base:
