@@ -98,3 +98,38 @@ class Rectangle(Base):
         rectangle = '\n' * self.y + \
             (' ' * self.x + '#' * self.width + '\n') * self.height
         print(rectangle, end='')
+
+    def __str__(self):
+        """ overriding str  method
+        """
+        return "[Rectangle] ({}) {}/{} - {}/{}" \
+            .format(self.id, self.__x, self.__y, self.__width, self.__height)
+
+    def args_update(self, id=None, width=None, height=None, x=None, y=None):
+        """ Updating the class Rectangle by assigning arguments
+        to each attributes """
+        if id is not None:
+            self.id = id
+        if width is not None:
+            self.width = width
+        if height is not None:
+            self.height = height
+        if x is not None:
+            self.x = x
+        if y is not None:
+            self.y = y
+
+    def update(self, *args, **kwargs):
+        """ This method updates instance attributes via
+        no-keyword & keyword arguments
+        """
+        if args:
+            self.args_update(*args)
+        else:
+            self.args_update(**kwargs)
+
+    def to_dictionary(self):
+        """ Returns the dictionary representation of class
+        square """
+        return {"id": self.id, "width": self.__width,
+                "height": self.__height, "x": self.__x, "y": self.__y}
