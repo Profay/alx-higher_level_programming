@@ -22,7 +22,9 @@ if __name__ == "__main__":
     cursor = dt.cursor()
     cursor.execute("SELECT * FROM states WHERE name = '{}'\
                    ORDER BY states.id".format(newName))
-    for row in cursor:
-        print(row)
+    rows = cursor.fetchall()
+    for row in rows:
+        if row[1] == newName:
+            print(row)
     cursor.close()
     dt.close()

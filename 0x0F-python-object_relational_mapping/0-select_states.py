@@ -20,7 +20,8 @@ if __name__ == "__main__":
         charset="utf8")
     cursor = dt.cursor()
     cursor.execute("SELECT * FROM states ORDER BY id ASC")
-    for row in cursor:
+    rows = cursor.fetchall()
+    for row in rows:
         print(row)
     cursor.close()
     dt.close()
