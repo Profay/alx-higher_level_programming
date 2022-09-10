@@ -21,7 +21,7 @@ if __name__ == "__main__":
     newName = args[4]
     cursor = dt.cursor()
     cursor.execute("SELECT * FROM states WHERE name = '{}'\
-                   ORDER BY states.id ASC".format(newName))
+                   ORDER BY states.id".format(newName))
     for row in cursor:
         print(row)
     cursor.close()
