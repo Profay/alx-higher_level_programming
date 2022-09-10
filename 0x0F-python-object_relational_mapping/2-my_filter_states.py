@@ -20,8 +20,8 @@ if __name__ == "__main__":
         charset="utf8")
     newName = args[4]
     cursor = dt.cursor()
-    cursor.execute("SELECT * FROM states WHERE name=%s\
-                   ORDER BY id ASC", (newName,))
+    cursor.execute("SELECT * FROM states WHERE name = '{}'\
+                   ORDER BY states.id ASC".format(newName))
     for row in cursor:
         print(row)
     cursor.close()

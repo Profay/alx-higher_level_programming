@@ -20,7 +20,7 @@ if __name__ == "__main__":
         charset="utf8")
     cursor = dt.cursor()
     cursor.execute("SELECT * FROM states WHERE name LIKE 'N%'\
-                   ORDER BY id ASC ")
+                   ORDER BY states.id ASC ")
     for row in cursor:
         print(row)
     cursor.close()
