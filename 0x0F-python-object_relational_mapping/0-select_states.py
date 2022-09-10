@@ -1,4 +1,11 @@
 #!/usr/bin/python3
+""" This module uses MySQLdb to print out states
+
+Usage:
+    ./filename user pw db
+"""
+
+
 import sys
 import MySQLdb
 
