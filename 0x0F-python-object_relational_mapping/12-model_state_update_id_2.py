@@ -19,9 +19,9 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
 
     session = Session(engine)
-    searchName = 'Arizona'
+    searchName = 2
     row = session.query(State).order_by(State.id).\
-        filter(text("name=:name")).params(name=searchName).first()
+        filter(text("id=:value")).params(value=searchName).first()
     row.name = 'New Mexico'
     session.commit()
     session.close()
