@@ -19,7 +19,7 @@ if __name__ == "__main__":
 
     session = Session(engine)
     rows = session.query(State).order_by(State.id).\
-        filter(State.name.like('%a%'))
+        filter(State.name.like('%a%')).all()
     for row in rows:
         session.delete(row)
     session.commit()
