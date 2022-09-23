@@ -12,7 +12,7 @@ def error_status():
     """
     url = sys.argv[1]
     response = requests.get(url)
-    if requests.status_codes >= 400:
+    if requests.status_codes > 399:
         print('Error code: {}'.format(request.status_code))
 
 
