@@ -21,7 +21,6 @@ def get_commits():
     except IndexError as e:
         print(e)
 
+
 if __name__ == "__main__":
-        get_commits()
-
-
+     get_commits()
