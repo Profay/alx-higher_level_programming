@@ -3,8 +3,8 @@
 print the last 10 commit
 """
 
-import sys
-import requests
+from sys import argv
+from requests import get
 
 
 def get_commits():
