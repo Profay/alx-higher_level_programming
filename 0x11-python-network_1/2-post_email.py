@@ -18,7 +18,7 @@ def get_POST_mail():
     data = urllib.parse.urlencode(email)
     data = data.encode('ascii')
     req = urllib.request.Request(url, data)
-    with urllib.request.urlopen(req) as req:
+    with urllib.request.urlopen(req) as response:
         print(response.read().decode('utf-8'))
 
 
