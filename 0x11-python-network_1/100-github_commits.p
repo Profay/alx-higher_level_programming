@@ -8,16 +8,18 @@ import requests
 
 
 def get_commits():
-        """ This function print the last 10 commits
-        """
-        url = "https://api.github.com/repos/sys.argv[2]/sys.argv[1]/commits"
-        response = requests.get(url)
-        my_dict = response.json()
-        for commit in my_dict[:10]:
-                print("{}: {}".format(commit.get(sha),/
-                                      commit.get(commit)/
-                                      get(author).get(name)
+    url = 'https://api.github.com/repos/{}/{}/commits'.format(argv[2], argv[1])
 
+    try:
+        r = get(url)
+        j = r.json()
+        for commit in j[:10]:
+            print('{}: {}'.format(commit.get('sha'),
+                                  commit.get('commit')
+                                  .get('author')
+                                  .get('name')))
+    except IndexError as e:
+        print(e)
 
 if __name__ == "__main__":
         get_commits()
