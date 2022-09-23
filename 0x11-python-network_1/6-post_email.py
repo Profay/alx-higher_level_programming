@@ -13,7 +13,7 @@ def get_POST_mail():
     POST request.
     """
     url = sys.argv[1]
-    email = {'email': argv[2]}
+    email = {'email': sys.argv[2]}
     response = requests.post(url, data=email)
     print(response.text)
 
