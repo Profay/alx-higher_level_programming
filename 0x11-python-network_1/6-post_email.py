@@ -14,7 +14,7 @@ def get_POST_mail():
     """
     url = sys.argv[1]
     email = sys.argv[2]
-    response = requests.post(url, email=email)
+    response = requests.post(url, data=email)
     print(response.text)
 
 
