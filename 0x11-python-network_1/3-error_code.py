@@ -24,7 +24,6 @@ def error_response():
             body = response.read().decode('utf-8')
             print(body)
     except error.HTTPError as e:
-        error_code = e.code().decode('utf-8')
         print("Error code: {}".format(error_code))
 
 
