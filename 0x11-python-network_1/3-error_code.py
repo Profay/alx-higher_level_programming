@@ -8,7 +8,7 @@ to the URL and displays the body of the response
 
 """
 
-from urllib import parse, request
+from urllib import parse, request, error
 from sys import argv
 
 
@@ -23,7 +23,7 @@ def error_response():
         with request.urlopen(req) as response:
             body = response.read().decode('utf-8')
             print(body)
-    except urllib.error.HTTPError as e:
+    except error.HTTPError as e:
         error_code = e.code().decode('utf-8')
         print("Error code: {}".format(error_code))
 
