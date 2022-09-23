@@ -26,3 +26,7 @@ def error_response():
     except urllib.error.HTTPError as e:
         error_code = e.code().decode('utf-8')
         print("Error code: {}".format(error_code))
+
+
+if __name__ == "__main__":
+    error_response()
