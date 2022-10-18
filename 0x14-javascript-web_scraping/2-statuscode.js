@@ -5,11 +5,10 @@
 // If an error occurred during the reading, print the error object
 
 const request = require('request');
-request.get(process.argv[2], function (response) {
-  // if (error) {
-  //    console.log('code: ' + error.code);
-  // }
-  if (response) {
+request.get(process.argv[2], function (error, response, body) {
+  if (error) {
+    console.log('code: ' + error.code);
+  } else if (response) {
     console.log('code: ' + response.statusCode);
   }
 });
