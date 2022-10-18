@@ -8,12 +8,13 @@ const request = require('request');
 request.get(('https://swapi-api.hbtn.io/api/films/' + process.argv[2]), function (error, response, body) {
   if (error == null) {
     const movies = JSON.parse(body);
-    for (let i = 0; i < movies.characters.length; i++) { 
-        request.get(movies.characters[i], function(error, respose, body) {
-            if (error == null) {
-                const character = JSON.parse(body);
-                console.log(character.name);
-            }
-        }) }
+    for (let i = 0; i < movies.characters.length; i++) {
+      request.get(movies.characters[i], function (error, respose, body) {
+        if (error == null) {
+          const character = JSON.parse(body);
+          console.log(character.name);
+        }
+      });
+    }
   }
 });
