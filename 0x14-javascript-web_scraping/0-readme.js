@@ -5,7 +5,7 @@
 // If an error occurred during the reading, print the error object
 
 const fs = require('fs');
-const path = require('process.argv[2]');
+const path = process.argv[2];
 fs.readFile(path, 'utf8', function (error, data) {
   console.log(error || data);
 });
